@@ -1,0 +1,12 @@
+a="ypthno"
+b="python"
+c=""
+for i in b:
+    if i not in a:
+        c="false"
+if c=="false":
+    print ("not passed")
+else:
+    print ("failed")
+if len(a)==len(b):
+    print ("failed")       
