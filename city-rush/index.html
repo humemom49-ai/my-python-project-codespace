@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b1018">
+  <title>Midnight Run — City Rush</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="shell">
+    <header class="topbar">
+      <a class="brand" href="#game" aria-label="City Rush home"><span class="brand-icon">✦</span> CITY<span>RUSH</span></a>
+      <span class="top-note"><span class="live-dot"></span> AN ORIGINAL ARCADE GAME</span>
+    </header>
+
+    <section class="intro">
+      <div><p class="eyebrow"><span>01 / THE NIGHT SHIFT</span> &nbsp; • &nbsp; DRIVE TO SURVIVE</p>
+        <h1>Own the <em>night.</em></h1>
+        <p class="subtitle">The city's yours for the taking. Dodge traffic, collect cash, and see how long you can last.</p>
+      </div>
+      <div class="intro-detail"><span>YOUR MISSION</span><strong>Stay in the game.</strong><span>NO BRAKES. NO BACKUP.</span></div>
+    </section>
+
+    <section class="game-panel" id="game" aria-label="City driving game">
+      <div class="game-top"><div><span class="panel-dot"></span> LIVE FROM THE STREETS</div><span>LOCATION: NEON DISTRICT</span></div>
+      <div class="canvas-wrap">
+        <canvas id="gameCanvas" width="960" height="560" aria-label="Driving game. Use arrow keys or WASD to move."></canvas>
+        <div class="overlay" id="overlay">
+          <div class="overlay-card">
+            <div class="overlay-tag">✦ &nbsp; CITY RUSH PRESENTS</div>
+            <h2 id="overlayTitle">Ready to ride?</h2>
+            <p id="overlayText">Weave through traffic and collect cash. Three hits and your run is over.</p>
+            <button id="startButton" type="button">START YOUR RUN <span>↗</span></button>
+            <div class="overlay-hint">WASD OR ARROW KEYS TO DRIVE</div>
+          </div>
+        </div>
+      </div>
+      <div class="game-bottom"><span>KEEP MOVING. KEEP EARNING.</span><span>BUILT FOR THE NIGHT <b>✦</b></span></div>
+    </section>
+
+    <section class="dashboard" aria-label="Game status">
+      <div class="stat"><span>YOUR SCORE</span><strong id="score">$0</strong><small>CASH COLLECTED</small></div>
+      <div class="stat"><span>TIME ON THE ROAD</span><strong id="time">00:00</strong><small>STAY SHARP</small></div>
+      <div class="stat health-stat"><span>VEHICLE HEALTH</span><strong id="health">♥ ♥ ♥</strong><small>AVOID THE TRAFFIC</small></div>
+      <div class="controls-info"><span>HOW TO PLAY</span><p><kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd> or arrow keys to move.<br>Pick up <b>green cash</b>. Avoid other cars.</p></div>
+    </section>
+    <div class="touch-controls" aria-label="Touch driving controls">
+      <button type="button" data-key="ArrowLeft" aria-label="Move left">←</button>
+      <div><button type="button" data-key="ArrowUp" aria-label="Move up">↑</button><button type="button" data-key="ArrowDown" aria-label="Move down">↓</button></div>
+      <button type="button" data-key="ArrowRight" aria-label="Move right">→</button>
+    </div>
+    <footer><span>© CITY RUSH &nbsp; / &nbsp; A LITTLE GAME FOR BIG NIGHTS</span><span>MADE TO PLAY <b>✦</b></span></footer>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>

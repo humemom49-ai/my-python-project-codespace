@@ -40,17 +40,22 @@ def catalog_checker(catalog):
         else:
             print (key,"is with",value)
     print("on shelf:", shelf_counter)
-while True:
-    command=input("choose add,lend,return,list or quit").strip().lower()
-    if command=="quit":
-        break
-    elif command=="add":
-        add_checker(catalog)
-    elif command=="lend":
-        lend_checker(catalog)
-    elif command=="return":
-        return_checker(catalog)
-    elif command=="list":
-        catalog_checker(catalog)
-    else:
-        print ("unknown command")
+
+def main():
+    while True:
+        command=input("choose add,lend,return,list or quit").strip().lower()
+        if command=="quit":
+            break
+        elif command=="add":
+            add_checker(catalog)
+        elif command=="lend":
+            lend_checker(catalog)
+        elif command=="return":
+            return_checker(catalog)
+        elif command=="list":
+            catalog_checker(catalog)
+        else:
+            print ("unknown command")
+
+if __name__ == "__main__":
+    main()
