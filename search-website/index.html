@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f5f0">
+  <meta name="description" content="A small search engine for discovering useful places on the web.">
+  <title>Orbit — find something wonderful</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="engine.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div class="page">
+    <header class="topbar">
+      <a class="wordmark" href="./" aria-label="Orbit home"><span class="logo-mark"><span></span></span>orbit<span class="logo-period">.</span></a>
+      <div class="top-right"><span class="header-note"><span class="status-dot"></span> A LITTLE CORNER OF THE INTERNET</span><button id="saved-toggle" class="saved-button" type="button" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4.5A1.5 1.5 0 0 1 7.5 3h9A1.5 1.5 0 0 1 18 4.5V21l-6-4-6 4z"/></svg> <span>Saved</span> <span id="saved-count" class="saved-count">0</span></button></div>
+    </header>
+    <main>
+      <section class="hero" aria-labelledby="headline">
+        <div class="hero-inner">
+          <div class="eyebrow"><span>✳</span> A BETTER PLACE TO BEGIN</div>
+          <h1 id="headline">Curiosity looks<br><em>good on you.</em></h1>
+          <p class="hero-copy">A little search, a lot of discovery. Find something<br class="desktop-only"> interesting and see where it takes you.</p>
+          <form id="search-form" role="search" class="search-box">
+            <svg class="search-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m16 16 4 4"></path></svg>
+            <label class="sr-only" for="search-input">Search the Orbit collection</label>
+            <input id="search-input" type="search" placeholder="What are you curious about?" autocomplete="off">
+            <kbd class="shortcut" aria-hidden="true">/</kbd>
+            <button type="submit">Search <span>↗</span></button>
+          </form>
+          <div class="suggestions"><span>TRY SEARCHING</span><button type="button" data-query="space">space <span>↗</span></button><button type="button" data-query="coding">coding <span>↗</span></button><button type="button" data-query="art">art <span>↗</span></button><button type="button" data-query="nature">nature <span>↗</span></button></div>
+        </div>
+        <div class="hero-decoration" aria-hidden="true"><div class="orbit-ring ring-one"></div><div class="orbit-ring ring-two"></div><div class="orbit-ring ring-three"></div><span class="orb orb-one"></span><span class="orb orb-two"></span><span class="orbit-star">✳</span><span class="orbit-label">THE JOY OF FINDING<br>YOUR NEXT THING.</span></div>
+      </section>
+      <section class="discover" id="discover" aria-labelledby="results-heading">
+        <div class="section-heading"><div><p class="section-kicker"><span></span> YOUR NEXT GOOD FIND</p><h2 id="results-heading">Explore the collection<span>.</span></h2><p id="results-description">A few thoughtfully picked places to get you started.</p></div><div class="collection-note"><span>THE ORBIT INDEX</span><strong><span id="collection-count">18</span> places to explore <span>✳</span></strong></div></div>
+        <div class="results-bar"><div class="filters" role="group" aria-label="Filter by category"><button class="filter active" type="button" data-category="All" aria-pressed="true">All discoveries</button><button class="filter" type="button" data-category="Science" aria-pressed="false">Science</button><button class="filter" type="button" data-category="Technology" aria-pressed="false">Technology</button><button class="filter" type="button" data-category="Culture" aria-pressed="false">Culture</button><button class="filter" type="button" data-category="World" aria-pressed="false">World</button></div><span id="result-count" aria-live="polite"></span></div>
+        <div id="results" class="results-grid"></div>
+        <div id="empty" class="empty" hidden><span>✳</span><h3>Nothing here just yet.</h3><p>Try a different search or category. There’s a whole lot more out there.</p><button id="clear-search" type="button">Clear your search ↗</button></div>
+        <div class="web-search"><div class="web-icon">↗</div><div><strong>Looking for something else?</strong><p>Orbit searches a small curated collection, not the entire web.</p></div><a id="web-link" href="https://duckduckgo.com/" target="_blank" rel="noopener noreferrer">Search the web <span>↗</span></a></div>
+      </section>
+    </main>
+    <footer><a class="wordmark footer-logo" href="./"><span class="logo-mark"><span></span></span>orbit<span class="logo-period">.</span></a><p>Made for the endlessly curious. <span>✳</span></p><div>TAKE THE SCENIC ROUTE <span>↗</span></div></footer>
+  </div>
+</body>
+</html>
